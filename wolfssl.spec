@@ -13,6 +13,7 @@ Group:		Libraries
 #Source0Download: https://github.com/wolfSSL/wolfssl/releases
 Source0:	https://github.com/wolfSSL/wolfssl/archive/v%{version}-stable/%{name}-%{version}-stable.tar.gz
 # Source0-md5:	d8ab3648d7a8510876a5c251f850525e
+Patch0:		%{name}-x32.patch
 URL:		https://www.wolfssl.com/
 BuildRequires:	autoconf >= 2.69
 BuildRequires:	automake >= 1:1.14.1
@@ -76,6 +77,7 @@ Dokumentacja API biblioteki wolfSSL.
 
 %prep
 %setup -q -n %{name}-%{version}-stable
+%patch0 -p1
 
 %build
 %{__libtoolize}
@@ -86,6 +88,7 @@ Dokumentacja API biblioteki wolfSSL.
 %configure \
 	--enable-all \
 	--enable-quic \
+	--disable-silent-rules \
 	%{?with_static_libs:--enable-static}
 %{__make}
 
