@@ -7,7 +7,7 @@ Summary:	wolfSSL - small, fast, portable implementation of TLS/SSL for embedded 
 Summary(pl.UTF-8):	wolfSSL - mała, szybka, przenośna implementacja TLS/SSL dla urządzeń wbudowanych
 Name:		wolfssl
 Version:	5.7.6
-Release:	1
+Release:	2
 License:	GPL v2 or commercial
 Group:		Libraries
 #Source0Download: https://github.com/wolfSSL/wolfssl/releases
